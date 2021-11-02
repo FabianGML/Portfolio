@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto+Mono:ital,wght@0,300;1,400&display=swap');
+  
+  /* CSS variables */
+   :root{
+
+    /* ======= Colors ========*/
+    --first-color: #031525;
+    --second-color: #89eeee; 
+    --text-color: #fff;
+    --text-2nd-color: #d3d3d3; 
+    
+    /* ======= Fonts ========*/
+    --first-font: 'Fira Sans', sans-serif;
+    --text-font: 'Roboto Mono', monospace;
+    /* ======= Weight ========*/
+    --semi-bold: 300;
+    --bold:400
+    /* ======= font-style ========*/
+    --italic: italic;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  background-color: var(--first-color);
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4 {
+  font-family: var(--first-font);
+  color: var(--second-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.container {
+  max-width: 968px;
+}
+
+/*=============== HERO SECTION ===============*/
+
+.hero_cont {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1.5rem;
+}
+
+.hero_text{
+  text-align: center;
+}
+
+.name{
+  font-size: 4.5rem;
+  margin-bottom: 2.5rem ;
+}
+
+.dev{
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.hero_img{
+  position: relative;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.pc_hero{
+  position: relative;
+  width: 65%;
+}
+
+.hero_front {
+  z-index: 100;
+}
+
+.hero_behind {
+  opacity: .255;
+  z-index: 0;
+}
+
+.mysql_hero,.html_hero,.css_hero ,
+.js_hero,.git_hero,.ang_hero,
+.laravel_hero,.pyt_hero,.react_hero {
+  width: 12%;
+  position: absolute;
+}
+
+.php_hero{
+  position: absolute;
+  width: 15%;
+  top: 19%;
+  right: 22%;
+}
+
+.mysql_hero{
+  top: 43%;
+  right: 22%;
+  filter: invert(1);
+}
+
+.html_hero{
+  bottom: 3%;
+  left: 15%;
+}
+
+.css_hero {
+  bottom: 3%;
+  right: 15%;
+}
+
+.js_hero{
+  top: 7%;
+  left: 5%;
+}
+
+.ang_hero{
+  top: 45%;
+  right: 10%;
+}
+
+.laravel_hero{
+  left: 35%;
+}
+
+.pyt_hero {
+  left: 45%;
+  top: 40%;
+}
+
+.react_hero {
+  left: 9%;
+  bottom: 30%;
+}
+
+
