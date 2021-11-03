@@ -51,7 +51,7 @@ a {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 4.5rem 0 2.5rem;
+  padding: 3rem 0 2.5rem;
 }
 
 .flex{
@@ -67,7 +67,70 @@ a {
   max-width: 968px;
 }
 
+/*=============== HEADER ===============*/
+/* NAV */
+@media screen and (max-width: 767px){
+
+
+.nav_toggle{
+  position: fixed;
+  font-size: 1.5rem;
+  cursor: pointer;
+  right: 1rem;
+  bottom: 2.5%;
+  z-index: 20;
+}
+.nav_list{
+  position:fixed;
+  height: 17vh;
+  column-gap: 4rem;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: #0e263b;
+  margin: 1rem;
+  padding: 1rem;
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+  bottom: -100%;
+  justify-content: space-evenly;
+  text-align: center;
+  box-shadow: 3px -6px 42px 8px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px -6px 42px 8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px -6px 42px 8px rgba(0,0,0,0.75);
+  z-index: 1000;
+  transition: .5s ease;
+}
+
+.nav_list.show-menu {
+  bottom: -1rem;
+}
+
+.nav_link{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.home_icon {
+  font-size: 1.355rem;
+  align-self: center;
+}
+
+.menu_contact {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+}
+}
+.menu_contact span {
+  border: 2px solid var(--second-color);
+  padding: .65rem;
+  border-radius: 40px;
+}
+
 /*=============== HERO SECTION ===============*/
+.hero{
+  height: 100vh;
+}
 
 .hero_cont {
   display: flex;
@@ -89,10 +152,21 @@ a {
   font-style: italic;
 }
 
+.home_social{
+  margin-top: 2rem;
+  font-size: 1.56rem;
+}
+
+.social_link{
+  color: #fff;
+  margin: 0 .75rem;
+}
+
+
 .hero_img{
   position: relative;
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 45%;
 }
 
 .pc_hero{

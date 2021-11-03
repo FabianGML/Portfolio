@@ -1,3 +1,16 @@
+/*============SHOW MENU==================*/
+
+const navToggle = document.querySelector('.nav_toggle'),
+nav = document.querySelector('.nav_list')
+
+/* Validate if constant exists */
+
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        nav.classList.add('show-menu')
+    })
+}
+
 tl = gsap.timeline();
 
 tl.from(".name", {
@@ -98,4 +111,24 @@ gsap.from(".ang_hero", {
     delay: 4,
     ease: "expo"
 });
+
+tl.from(".menu_contact" , {
+    duration: 1,
+    x: -200,
+    opacity: 0,
+})
+
+gsap.from(".nav_toggle" , {
+    duration: 1,
+    x: 200,
+    opacity: 0,
+    delay: 3.85
+})
+
+gsap.from(".home_social" , {
+    duration: 1,
+    scale: 0 ,
+    opacity: 0,
+    delay: 3.85
+})
 
