@@ -11,6 +11,9 @@ if(navToggle){
     })
 }
 
+/*============GSAP Hero section==================*/
+gsap.registerPlugin(ScrollTrigger);
+
 tl = gsap.timeline();
 
 tl.from(".name", {
@@ -131,4 +134,33 @@ gsap.from(".home_social" , {
     opacity: 0,
     delay: 3.85
 })
+
+/* ============= PROJECT IMG =============== */
+const project = document.querySelector('.project_cont'),
+ img = document.querySelector('.project_img'),
+ info = document.querySelector('.project_info');
+
+ project.addEventListener('mouseover' , () => {
+        img.classList.add('project-focus')
+        info.classList.add('project-focus')
+ })
+
+ project.addEventListener('mouseout' , () => {
+        img.classList.remove('project-focus')
+        info.classList.remove('project-focus')
+ })
+
+
+// gsap.to(".project_scrub" , {
+//     scrollTrigger:{
+//         trigger: ".project_scrub",
+//         start: "top 90%",
+//         end: "top 20%",
+//         scrub: 1,
+//         markers: true
+//     },
+//     x:50 ,
+//     ease: "none",
+//     duration: 3
+// });
 

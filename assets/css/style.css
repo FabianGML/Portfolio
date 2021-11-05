@@ -7,7 +7,7 @@
     --first-color: #031525;
     --second-color: #89eeee; 
     --text-color: #fff;
-    --text-2nd-color: #d3d3d3; 
+    --text-2nd-color: #c2c2c2; 
     
     /* ======= Fonts ========*/
     --first-font: 'Fira Sans', sans-serif;
@@ -49,6 +49,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 3rem 0 2.5rem;
@@ -78,7 +83,7 @@ a {
   cursor: pointer;
   right: 1rem;
   bottom: 2.5%;
-  z-index: 20;
+  z-index: 200;
 }
 .nav_list{
   position:fixed;
@@ -166,7 +171,7 @@ a {
 .hero_img{
   position: relative;
   text-align: center;
-  margin-bottom: 45%;
+  margin-bottom: 15vh;
 }
 
 .pc_hero{
@@ -235,6 +240,74 @@ a {
 .react_hero {
   left: 9%;
   bottom: 30%;
+}
+
+/*=============== PROJECTS ===============*/
+
+.project_scrub{
+  font-family: var(--first-font);
+  font-size: 7rem;
+  color: var(--text-2nd-color);
+  position: absolute;
+  opacity: 0.3;
+  left: -10rem;
+}
+
+.project_cont {
+  position: relative;
+  margin: auto ;
+  border-radius: 15px;
+  height: 250px;
+  overflow: hidden;
+  width: 90%;
+  
+}
+
+.project_img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  object-position: 10%;
+  transition: .5s ease;
+}
+
+.project_img.project-focus{
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.project_info{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  z-index: -1;
+  transition: .2s ease;
+}
+
+.project_info.project-focus {
+  z-index: 200;
+  background-color: #0e263b;
+  transition: .5s ease;
+}
+
+.project_desc{
+  text-align: center;
+  padding: .5rem;
+}
+
+.project_button {
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+.projecto_link {
+  border: 1px solid var(--second-color);
+  padding: .65rem;
+  margin: 1rem auto;
+  border-radius: 40px;
+  color: #fff;
 }
 
 
