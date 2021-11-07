@@ -6,6 +6,11 @@
 
     <!-- ============================== ICONS ============================== -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- ============================== Swipper ============================== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
 
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,9 +29,9 @@
                 <li class="nav_item"><a href="#" class="nav_link"><i class="ri-html5-line home_icon"></i> Tech</a></li>
                 <li class="nav_item"><a href="#" class="nav_link"><i class="ri-contacts-book-line home_icon"></i>Contact</a></li>
             </ul>
-            <div class="menu_contact">
+            <a href="#" class="menu_contact">
                 <span>Contact Me!</span>
-            </div>
+            </a>
         </div>
     </header>
     <main class="main">
@@ -55,54 +60,108 @@
                     <img src="assets/imagenes/programador-pc.svg" alt="Programador" class="pc_hero hero_front">
                     <img src="assets/imagenes/php.png" alt="PHP" class="php_hero hero_front">
                     <img src="assets/imagenes/mysql.png" alt="mysql" class="mysql_hero hero_front">
-                    <img src="assets/imagenes/html5.png" alt="mysql" class="html_hero hero_front">
-                    <img src="assets/imagenes/css-3.png" alt="mysql" class="css_hero hero_front">
-                    <img src="assets/imagenes/js.png" alt="mysql" class="js_hero hero_behind">
-                    <img src="assets/imagenes/git.svg" alt="mysql" class="git_hero hero_behind">
-                    <img src="assets/imagenes/angular.svg" alt="mysql" class="ang_hero hero_behind">
-                    <img src="assets/imagenes/laravel.svg" alt="mysql" class="laravel_hero hero_behind">
-                    <img src="assets/imagenes/python.svg" alt="mysql" class="pyt_hero hero_behind">
-                    <img src="assets/imagenes/react.svg" alt="mysql" class="react_hero hero_behind">
+                    <img src="assets/imagenes/html5.png" alt="html" class="html_hero hero_front">
+                    <img src="assets/imagenes/css-3.png" alt="css" class="css_hero hero_front">
+                    <img src="assets/imagenes/js.png" alt="javaScript" class="js_hero hero_behind">
+                    <img src="assets/imagenes/git.svg" alt="git" class="git_hero hero_behind">
+                    <img src="assets/imagenes/angular.svg" alt="angular" class="ang_hero hero_behind">
+                    <img src="assets/imagenes/laravel.svg" alt="laravel" class="laravel_hero hero_behind">
+                    <img src="assets/imagenes/python.svg" alt="python" class="pyt_hero hero_behind">
+                    <img src="assets/imagenes/react.svg" alt="react" class="react_hero hero_behind">
                 </div>
             </div>
         </section>
         <section class="section projects">
-            <!-- <span class="project_scrub">PROJECTS</span> -->
-            
-            <div class="wrapper_cont">
-
-                <div class="project_cont">
-                    <img src="assets/imagenes/reposteria.PNG" alt="" class="project_img">
+            <!-- <div class="project_title"> -->
+                <!-- <span class="project_scrub">M</span> -->
+                <!-- <span class="project_scrub2">y</span> -->
+                <!-- <span class="project_scrub3">PROJECTS</span> -->
+            <!-- </div> -->
+            <h2 class="title">My Projects!</h2>
+            <div class="project_cont swiper container">
+                <div class="swiper-wrapper">
                     
-                    <div class="project_info">
-                        <p class="project_desc">
-                            This cake shop website was created for a client who wanted to 
-                            show his work, The admin can upload, delete and modify the content
-                        </p>
-                        <div class="project_button">
-                            <a href="#" class="projecto_link">
-                                Visit Website <i class="ri-arrow-right-s-line"></i>
-                            </a>
+                    <div class="project_card swiper-slide">
+                        <img src="assets/imagenes/reposteria.PNG" alt="reposteria" class="project_img">
+                        
+                        <div class="project_info">
+                            <p class="project_desc">
+                                This cake shop <strong>website</strong> was created for a client who wanted to 
+                                show his work, The admin can upload, delete and modify the content
+                            </p>
+                            <div class="project_button">
+                                <a href="https://reposmarezafe.web.app/" class="project_link">
+                                    Visit Website <i class="ri-arrow-right-s-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="project_card card2 swiper-slide">
+                        <img src="assets/imagenes/antioquia.PNG" alt="estetica" class="project_img img2">
+                    
+                        <div class="project_info info2">
+                            <p class="project_desc">
+                                Hair Salon website with the purpose to announce 
+                                the establishment 
+                            </p>
+                            <div class="project_button">
+                                <a href="#" class="project_link">
+                                    Visit Website <i class="ri-arrow-right-s-line"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-<!--                 
-                <div class="project_cont">
-                    <img src="assets/imagenes/antioquia.PNG" alt="" class="project_img">
-                    
-                    <div class="project_info">
-                        <p class="project_desc">
-                            Hair Salon website with the purpose to announce 
-                            the establishment 
-                        </p>
-                        <div class="project_button">
-                            <a href="#" class="projecto_link">
-                                Visit Website <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </div>
+            </div>
+        </section>
+        <section class="tech section">
+            <div class="tech_cont">
+                <img src="assets/imagenes/tech-comp.svg" alt="technology" class="tech_comp">
+                <div class="current_tech">
+                    <div class="info_tech">
+                        <h2 class="title" id="tech-title">Technologies</h2>
+                        <p class="info_text">I've worked with these <strong>technologies</strong> on some
+                        projects, however, <strong>every day</strong> i learn something new, i can't wait to learn the <strong>next technology</strong> </p>
                     </div>
-                </div> -->
-
+                    <div class="tech_imgs flex">
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">HTML</h3>
+                            <img src="assets/imagenes/html5.png" alt="html5" class="tech_img">
+                        </div>
+                       
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">CSS</h3>
+                            <img src="assets/imagenes/css-3.png" alt="css3" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">JS</h3>
+                            <img src="assets/imagenes/js.png" alt="Js" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">PHP</h3>
+                            <img src="assets/imagenes/php2.svg" alt="php" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">Laravel</h3>
+                            <img src="assets/imagenes/laravel.png" alt="laravel" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">MySQL</h3>
+                            <img src="assets/imagenes/mysql-icon.svg" alt="mysql" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">Git</h3>
+                            <img src="assets/imagenes/git2.png" alt="git" class="tech_img">
+                        </div>
+                        <div class="tech_img_cont">
+                            <h3 class="tech_title">Github</h3>
+                            <img src="assets/imagenes/github.png" alt="github" class="tech_img">
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -113,6 +172,8 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
  
+ <!-- ============================== SWIPER ============================== -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
  <!-- ============================== MAIN JS ============================== -->
  <script src="assets/js/main.js"></script>
 

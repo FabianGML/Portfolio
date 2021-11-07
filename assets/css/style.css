@@ -130,6 +130,7 @@ img {
   border: 2px solid var(--second-color);
   padding: .65rem;
   border-radius: 40px;
+  color: #fff;
 }
 
 /*=============== HERO SECTION ===============*/
@@ -244,37 +245,60 @@ img {
 
 /*=============== PROJECTS ===============*/
 
-.project_scrub{
+.project_scrub,.project_scrub2{
   font-family: var(--first-font);
   font-size: 7rem;
   color: var(--text-2nd-color);
-  position: absolute;
+  /* position: absolute; */
+  opacity: 0.3;
+  left: 10rem;
+}
+
+.project_scrub3{
+  font-family: var(--first-font);
+  font-size: 500%;
+  color: var(--text-2nd-color);
+  /* position: relative; */
   opacity: 0.3;
   left: -10rem;
 }
 
-.project_cont {
+/* .project_title {
+  margin: 5rem 0 20rem 0 ;
+  border: 2px solid red;
+} */
+.title {
+  text-align: center;
+  margin: 3rem;
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: 2rem;
+  color: #fff;
+
+}
+
+.project_card {
   position: relative;
-  margin: auto ;
   border-radius: 15px;
   height: 250px;
   overflow: hidden;
   width: 90%;
-  
 }
 
 .project_img {
   position: absolute;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: 10%;
-  transition: .5s ease;
+  transition: .2s ease;
 }
 
-.project_img.project-focus{
+.project_img:hover{
   transform: scale(1.5);
   opacity: 0;
 }
+
 
 .project_info{
   position: absolute;
@@ -283,12 +307,7 @@ img {
   border-radius: 15px;
   z-index: -1;
   transition: .2s ease;
-}
-
-.project_info.project-focus {
-  z-index: 200;
-  background-color: #0e263b;
-  transition: .5s ease;
+  background-color: #19354d;
 }
 
 .project_desc{
@@ -302,7 +321,7 @@ img {
   width: 100%;
 }
 
-.projecto_link {
+.project_link {
   border: 1px solid var(--second-color);
   padding: .65rem;
   margin: 1rem auto;
@@ -310,4 +329,43 @@ img {
   color: #fff;
 }
 
+/*=============== PROJECTS ===============*/
 
+.tech_cont {
+  text-align: center;
+}
+
+.tech_comp{
+  width: 60%;
+  position: relative;
+  top: 4.5rem;
+}
+
+.current_tech{
+  margin: 1.15rem;
+  background-color: #0e263b;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.title{
+  margin: initial;
+  margin-bottom: 1rem;
+}
+
+.tech_title{
+  margin-bottom: .5rem;
+}
+
+.tech_imgs{
+  flex-wrap: wrap;
+  /* align-items: center; */
+  column-gap: .940rem;
+  row-gap: 3rem;
+  padding: 1rem;
+  margin: 3rem 0;
+}
+
+.tech_img{
+  width: 5rem;
+}

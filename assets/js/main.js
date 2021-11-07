@@ -135,21 +135,132 @@ gsap.from(".home_social" , {
     delay: 3.85
 })
 
-/* ============= PROJECT IMG =============== */
-const project = document.querySelector('.project_cont'),
- img = document.querySelector('.project_img'),
- info = document.querySelector('.project_info');
 
- project.addEventListener('mouseover' , () => {
-        img.classList.add('project-focus')
-        info.classList.add('project-focus')
+
+
+ /*==================== PROJECT SWIPER ====================*/
+let swiper = new Swiper(".project_cont", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 32,
+    coverflowEffect: {
+        rotate: 0,
+    },
+})
+ /*==================== PROJECT Gsap ====================*/
+ gsap.from(".project_title" , {
+    scrollTrigger: {
+        trigger: ".project_title",
+        start: "30% 85%",
+        toggleActions: "play reset play reset"
+    },
+    y:100,
+    ease: "none",
+    opacity: 0,
+    duration: .3
+})
+ gsap.from(".project_card" , {
+    scrollTrigger: {
+        trigger: ".project_card",
+        start: "30% 90%",
+        toggleActions: "play reset play reset",
+    },
+    x:100,
+    ease: "none",
+    opacity: 0,
+    duration: .5
+})
+
+ /*==================== Tech Gsap ====================*/
+
+ gsap.from(".tech_comp", {
+     scrollTrigger: {
+         trigger: ".tech_comp",
+         start: "30% 90%",
+         toggleActions: "play reset play reset"
+     },
+     opacity: 0,
+     duration: 1,
+     scale: 0.2
+ })
+ gsap.from("#tech-title", {
+     scrollTrigger: {
+         trigger: "#tech-title",
+         start: "30% 90%",
+         toggleActions: "play reset play reset"
+     },
+     opacity: 0,
+     duration: 1,
+     y:-100
+ })
+ gsap.from(".info_text", {
+     scrollTrigger: {
+         trigger: ".info_text",
+         start: "30% 90%",
+         toggleActions: "play reset play reset"
+     },
+     opacity: 0,
+     duration: 1,
+     y:-100
+ })
+ gsap.from(".tech_img,.tech_title", {
+     scrollTrigger: {
+         trigger: ".tech_img",
+         start: "30% 90%",
+         toggleActions: "play reset play reset"
+     },
+     opacity: 0,
+     duration: 1,
+     stagger: .2,
+     y:-100
  })
 
- project.addEventListener('mouseout' , () => {
-        img.classList.remove('project-focus')
-        info.classList.remove('project-focus')
- })
+// tl2 = gsap.timeline();
 
+// gsap.to(".project_scrub", {
+//     scrollTrigger: {
+//         trigger: ".project_scrub",
+//         start: "center 45%",
+//         scrub: true ,
+//         pin: true,
+//         markers: true,
+//         toggleActions: "play none reverse play"
+//     },
+//     x: 400,
+//     opacity: 0,
+//     duration: .5
+
+// })
+
+// tl2.from(".project_scrub2", {
+//     scrollTrigger: {
+//         trigger: ".project_title",
+//         start: "center 45%",
+//         scrub: true ,
+//         pin: true,
+//         markers: true
+//     },
+//     x: -100,
+//     opacity: 0,
+//     duration: .5
+
+// })
+// tl2.from(".project_scrub3", {
+//     scrollTrigger: {
+//         trigger: ".project_title",
+//         start: "center 45%",
+//         scrub: true ,
+//         pin: true,
+//         markers: true
+//     },
+//     x: -100,
+//     opacity: 0,
+//     duration: .5
+
+// })
 
 // gsap.to(".project_scrub" , {
 //     scrollTrigger:{
