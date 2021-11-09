@@ -151,17 +151,17 @@ let swiper = new Swiper(".project_cont", {
     },
 })
  /*==================== PROJECT Gsap ====================*/
- gsap.from(".project_title" , {
-    scrollTrigger: {
-        trigger: ".project_title",
-        start: "30% 85%",
-        toggleActions: "play reset play reset"
-    },
-    y:100,
-    ease: "none",
-    opacity: 0,
-    duration: .3
-})
+//  gsap.from(".project_title" , {
+//     scrollTrigger: {
+//         trigger: ".project_title",
+//         start: "30% 85%",
+//         toggleActions: "play reset play reset"
+//     },
+//     y:100,
+//     ease: "none",
+//     opacity: 0,
+//     duration: .3
+// })
  gsap.from(".project_card" , {
     scrollTrigger: {
         trigger: ".project_card",
@@ -180,6 +180,7 @@ let swiper = new Swiper(".project_cont", {
      scrollTrigger: {
          trigger: ".tech_comp",
          start: "30% 90%",
+         end: "100px top",
          toggleActions: "play reset play reset"
      },
      opacity: 0,
@@ -190,7 +191,8 @@ let swiper = new Swiper(".project_cont", {
      scrollTrigger: {
          trigger: "#tech-title",
          start: "30% 90%",
-         toggleActions: "play reset play reset"
+         end: "100px top",
+         toggleActions: "play reset play reset",
      },
      opacity: 0,
      duration: 1,
@@ -213,25 +215,49 @@ let swiper = new Swiper(".project_cont", {
          toggleActions: "play reset play reset"
      },
      opacity: 0,
-     duration: 1,
+     duration: .5,
      stagger: .2,
      y:-100
  })
+ 
+ /*==================== About Gsap ====================*/
 
 // tl2 = gsap.timeline();
 
-// gsap.to(".project_scrub", {
-//     scrollTrigger: {
-//         trigger: ".project_scrub",
-//         start: "center 45%",
-//         scrub: true ,
-//         pin: true,
-//         markers: true,
-//         toggleActions: "play none reverse play"
-//     },
-//     x: 400,
-//     opacity: 0,
-//     duration: .5
+gsap.to(".title_scrub", {
+    scrollTrigger: {
+        trigger: ".title_scrub",
+        start: "25% 45%",
+        scrub: true ,
+        // toggleActions: "play none reverse play"
+    },
+    y: 200,
+    duration: .5
+})
+
+gsap.from(".img_cont", {
+    scrollTrigger: {
+        trigger: ".img_cont",
+        start: "30% 90%",
+        end: "190px top",
+        toggleActions: "play reset play reset"
+    },
+    opacity: 0,
+    scale: 0.1,
+    duration: 1.5
+})
+
+gsap.from(".about_info" , {
+    scrollTrigger: {
+        trigger: ".about_info",
+        start: "30% 90%",
+        end: "190px top",
+        toggleActions: "play reset play reset"
+    },
+    x:200,
+    opacity: 0,
+    duration: 1.5,
+})
 
 // })
 
@@ -274,4 +300,3 @@ let swiper = new Swiper(".project_cont", {
 //     ease: "none",
 //     duration: 3
 // });
-
