@@ -55,6 +55,9 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.main {
+  overflow-x: hidden;
+}
 .section {
   padding: 3rem 0 2.5rem;
 }
@@ -165,8 +168,12 @@ img {
 
 .social_link{
   color: #fff;
-  margin: 0 .75rem;
+  margin: 1.5rem 0;
+  text-align: center;
 }
+
+
+
 
 
 .hero_img{
@@ -280,6 +287,7 @@ img {
   height: 250px;
   overflow: hidden;
   width: 90%;
+  max-width: 350px;
 }
 
 .project_img {
@@ -336,6 +344,7 @@ img {
   width: 60%;
   position: relative;
   top: 4.5rem;
+  z-index: -1;
 }
 
 .current_tech{
@@ -385,9 +394,6 @@ img {
   width: 300%;
 }
 
-.about_cont{
-  /* position: relative; */
-}
 .img_cont{
   position: relative;
 }
@@ -415,6 +421,14 @@ img {
 .contact_container{
   background-color: #0e263b;
   padding: 1rem;
+}
+
+.contact_link_cont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
 }
 
 input,textarea {
@@ -445,4 +459,140 @@ textarea {
   background-color: var(--first-color);
   font-family: var(--text-font);
   font-style: italic;
+}
+
+/*=============== Media Queries ===============*/
+ /* For small devices  */
+ @media screen and (max-height: 660px), screen and (max-width: 340px){
+  .name{
+    font-size: 3.5rem;
+  }
+
+  .dev{
+    font-size: 1.225rem;
+  }
+
+  .tech_imgs{
+    column-gap: 3rem;
+  }
+  
+ }
+@media screen and (max-height: 767px) {
+
+  .hero_img{
+    position: relative;
+    text-align: center;
+    margin-bottom: 6vh;
+  }
+}
+
+@media screen and (min-width: 351px){
+  .tech_imgs{
+    column-gap: 4.5rem;
+  }
+
+  .tech_comp {
+    top: 6rem;
+  }
+}
+@media screen and (min-width: 475px){
+  .hero_img{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+  .tech_imgs{
+    column-gap: 4.2rem;
+  }
+
+  .tech_comp{
+    top: 7rem;
+  }
+
+  .title_scrub{
+    bottom: -10rem;
+  }
+
+  
+}
+@media screen and (min-width: 533px){
+  .about_square{
+    left: 15%;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 600px){
+  .hero_img{
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .dev {
+    font-size: 1.5rem;
+  }
+
+  .social_link{
+    font-size: 1.8rem;
+  }
+
+  .title{
+    font-size: 2.5rem;
+  }
+
+  .info_text{
+    font-size: 1.225rem;
+  }
+
+  .tech_imgs{
+    column-gap: 9rem;
+  }
+
+  .tech_comp{
+    width: 40%;
+    top: 6rem;
+  }
+
+  .about_square{
+    right: -10%;
+    width: 80%;
+  }
+
+  .about_info{
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+  }
+
+  label{
+    font-size: 1.2rem;
+  }
+
+  input,textarea{
+    font-size: 1.2rem;
+  }
+
+  .send_btn{
+    font-size: 1.2rem;
+  }
+}
+
+
+
+@media screen and (min-width: 715px){
+  .tech_imgs{
+    column-gap: 11rem;
+  }
+  
+  .about_square{
+    left: 15%;
+    width: 70%;
+  }
+  
+  
 }

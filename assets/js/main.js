@@ -212,6 +212,7 @@ let swiper = new Swiper(".project_cont", {
      scrollTrigger: {
          trigger: ".tech_img",
          start: "30% 90%",
+         end: "450px top",
          toggleActions: "play reset play reset"
      },
      opacity: 0,
@@ -250,7 +251,7 @@ gsap.from(".img_cont", {
 gsap.from(".about_info" , {
     scrollTrigger: {
         trigger: ".about_info",
-        start: "30% 90%",
+        start: "20% 90%",
         end: "190px top",
         toggleActions: "play reset play reset"
     },
