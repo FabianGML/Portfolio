@@ -11,6 +11,7 @@ if(navToggle){
     })
 }
 
+
 /*============GSAP Hero section==================*/
 gsap.registerPlugin(ScrollTrigger);
 
@@ -128,6 +129,13 @@ gsap.from(".nav_toggle" , {
     delay: 3.85
 })
 
+gsap.from(".nav_list" , {
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    delay: 3.85
+})
+
 gsap.from(".home_social" , {
     duration: 1,
     scale: 0 ,
@@ -139,17 +147,27 @@ gsap.from(".home_social" , {
 
 
  /*==================== PROJECT SWIPER ====================*/
-let swiper = new Swiper(".project_cont", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: true,
-    spaceBetween: 32,
-    coverflowEffect: {
-        rotate: 0,
-    },
-})
+         let swiper = new Swiper(".project_cont", {
+             effect: "coverflow",
+             grabCursor: true,
+             centeredSlides: true,
+             slidesPerView: "auto",
+             loop: true,
+             spaceBetween: 28,
+             coverflowEffect: {
+                 rotate: 0,
+                },
+            })
+       
+    // if ($(window).width() > 1024){
+    //     let wrapper = document.querySelector('.swiper-wrapper'),
+    //     slide = document.querySelector('.swiper-slide'),
+    //     swiper = document.querySelector('.swiper')
+
+    //     wrapper.classList.remove('swiper-wrapper')
+    //     slide.classList.remove('swiper-slide')
+    //     swiper.classList.remove('swiper')
+    // }
  /*==================== PROJECT Gsap ====================*/
 //  gsap.from(".project_title" , {
 //     scrollTrigger: {
