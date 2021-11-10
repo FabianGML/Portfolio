@@ -219,8 +219,8 @@ gsap.from(".home_social" , {
  gsap.from(".info_text", {
      scrollTrigger: {
          trigger: ".info_text",
-         start: "30% 90%",
-         toggleActions: "play reset play reset"
+         start: "top 90%",
+         toggleActions: "play reset play reset",
      },
      opacity: 0,
      duration: 1,
@@ -257,8 +257,8 @@ gsap.to(".title_scrub", {
 gsap.from(".img_cont", {
     scrollTrigger: {
         trigger: ".img_cont",
-        start: "30% 90%",
-        end: "190px top",
+        start: "top 90%",
+        end: "290px top",
         toggleActions: "play reset play reset"
     },
     opacity: 0,
@@ -269,8 +269,8 @@ gsap.from(".img_cont", {
 gsap.from(".about_info" , {
     scrollTrigger: {
         trigger: ".about_info",
-        start: "20% 90%",
-        end: "190px top",
+        start: "top 90%",
+        end: "350px top",
         toggleActions: "play reset play reset"
     },
     x:200,
