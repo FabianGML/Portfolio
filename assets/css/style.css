@@ -251,7 +251,6 @@ img {
   font-family: var(--first-font);
   font-size: 7rem;
   color: var(--text-2nd-color);
-  /* position: absolute; */
   opacity: 0.3;
   left: 10rem;
 }
@@ -260,7 +259,6 @@ img {
   font-family: var(--first-font);
   font-size: 500%;
   color: var(--text-2nd-color);
-  /* position: relative; */
   opacity: 0.3;
   left: -10rem;
 }
@@ -281,8 +279,7 @@ img {
   border-radius: 15px;
   height: 250px;
   overflow: hidden;
-  width: 90%;
-  max-width: 350px;
+  width: 80%;
 }
 
 .project_img {
@@ -297,17 +294,24 @@ img {
 .project_img:hover{
   transform: scale(1.5);
   opacity: 0;
+  z-index: -1;
 }
 
 
 .project_info{
   position: absolute;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   width: 100%;
   border-radius: 15px;
   z-index: -1;
   transition: .2s ease;
   background-color: #19354d;
+}
+
+.project_info:hover {
+  z-index: 100;
 }
 
 .project_desc{
@@ -471,6 +475,7 @@ textarea {
   background-color: var(--first-color);
   font-family: var(--text-font);
   font-style: italic;
+  cursor: pointer;
 }
 
 /*=============== Media Queries ===============*/
@@ -621,6 +626,10 @@ textarea {
   .project_cont{
     width: 600px;
   }
+
+  .project_card{
+    height: 350px;
+  }
   
   .title_scrub{
     transform: rotate(-90deg);
@@ -639,6 +648,9 @@ textarea {
 }
 
 @media screen and (min-width: 1024px){
+  .nav_list{
+    column-gap: 4rem;
+  }
 
   .hero{
     height: calc(100vh - 3rem);
@@ -659,11 +671,14 @@ textarea {
 
   .project_card{
     height: 30rem;
-    border: 2px solid red;
+  }
+  
+  .project_info{
+    font-size: 1.5rem;
   }
 
   .tech_comp{
-    top: 8rem;
+    top: 7rem;
   }
 
   .current_tech{
@@ -715,16 +730,6 @@ textarea {
   }
 }
 
-@media screen and (min-width: 1024px){
-  .nav_list{
-    column-gap: 4rem;
-  }
-  
-  .tech_comp{
-    top: 7rem;
-  }
-}
-
 @media screen and (min-width: 1200px){
   .name{
     font-size: 6rem;
@@ -773,6 +778,13 @@ textarea {
     padding: 1rem 2rem ;
     margin: 2rem auto ;
   }
+  .project_cont{
+    width: 90%;
+  }
 
+
+  .project_card{
+    height: 50rem;
+  }
   
 }

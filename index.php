@@ -78,13 +78,13 @@
                 <!-- <span class="project_scrub3">PROJECTS</span> -->
             <!-- </div> -->
             <h2 class="title">My Projects!</h2>
-            <div class="project_cont swiper container">
+            <div class="project_cont swiper">
                 <div class="swiper-wrapper">
                     
                     <div class="project_card swiper-slide">
                         <img src="assets/imagenes/reposteria.PNG" alt="reposteria" class="project_img">
                         
-                        <div class="project_info">
+                        <div class="project_info flex">
                             <p class="project_desc">
                                 This cake shop <strong>website</strong> was created for a client who wanted to 
                                 show his work, The admin can upload, delete and modify the content
@@ -98,16 +98,16 @@
                     </div>
 
                 
-                    <div class="project_card card2 swiper-slide">
+                    <div class="project_card swiper-slide">
                         <img src="assets/imagenes/antioquia.PNG" alt="estetica" class="project_img img2">
                     
-                        <div class="project_info info2">
+                        <div class="project_info flex">
                             <p class="project_desc">
                                 Hair Salon website with the purpose to announce 
                                 the establishment 
                             </p>
                             <div class="project_button">
-                                <a href="#" class="project_link">
+                                <a href="https://antioquiaeste.web.app/" class="project_link">
                                     Visit Website <i class="ri-arrow-right-s-line"></i>
                                 </a>
                             </div>
@@ -183,17 +183,25 @@
             <div class="contact_container">
                 <h3 class="title">Contact Me!</h3>
                 <div class="form_cont">
-                    <form action="POST">
+                    <form action="email.php" method="POST">
 
                         <label for="name">Full Name:</label>
                         <input type="text" name="name" required placeholder="Type your name...">
                         
                         <label for="email">Email:</label>
                         <input type="email" name="email" required placeholder="Type your email...">
+
+                        <label for="email">Subject:</label>
+                        <input type="tex" name="subject" required placeholder="Type your subject...">
                         
                         <label for="message">Message:</label>
                         <textarea name="message" required cols="30" rows="5" placeholder="Leave a message"></textarea>
-
+                        <?php
+                        if(isset($_SESSION['email_send'])){
+                            echo $_SESSION['email_send'];
+                            unset($_SESSION['email_send']);
+                        }
+                         ?>
                         <button type="submit" name="submit"class="send_btn">Contact me!</button>
                     </form>
                     <div class="contact_link_cont">

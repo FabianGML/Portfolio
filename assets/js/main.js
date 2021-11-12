@@ -157,29 +157,8 @@ gsap.from(".home_social" , {
              coverflowEffect: {
                  rotate: 0,
                 },
-            })
-       
-    // if ($(window).width() > 1024){
-    //     let wrapper = document.querySelector('.swiper-wrapper'),
-    //     slide = document.querySelector('.swiper-slide'),
-    //     swiper = document.querySelector('.swiper')
+            });
 
-    //     wrapper.classList.remove('swiper-wrapper')
-    //     slide.classList.remove('swiper-slide')
-    //     swiper.classList.remove('swiper')
-    // }
- /*==================== PROJECT Gsap ====================*/
-//  gsap.from(".project_title" , {
-//     scrollTrigger: {
-//         trigger: ".project_title",
-//         start: "30% 85%",
-//         toggleActions: "play reset play reset"
-//     },
-//     y:100,
-//     ease: "none",
-//     opacity: 0,
-//     duration: .3
-// })
  gsap.from(".project_card" , {
     scrollTrigger: {
         trigger: ".project_card",
@@ -241,14 +220,11 @@ gsap.from(".home_social" , {
  
  /*==================== About Gsap ====================*/
 
-// tl2 = gsap.timeline();
-
 gsap.to(".title_scrub", {
     scrollTrigger: {
         trigger: ".title_scrub",
         start: "25% 45%",
         scrub: true ,
-        // toggleActions: "play none reverse play"
     },
     y: 200,
     duration: .5
@@ -277,45 +253,3 @@ gsap.from(".about_info" , {
     opacity: 0,
     duration: 1.5,
 })
-
-// })
-
-// tl2.from(".project_scrub2", {
-//     scrollTrigger: {
-//         trigger: ".project_title",
-//         start: "center 45%",
-//         scrub: true ,
-//         pin: true,
-//         markers: true
-//     },
-//     x: -100,
-//     opacity: 0,
-//     duration: .5
-
-// })
-// tl2.from(".project_scrub3", {
-//     scrollTrigger: {
-//         trigger: ".project_title",
-//         start: "center 45%",
-//         scrub: true ,
-//         pin: true,
-//         markers: true
-//     },
-//     x: -100,
-//     opacity: 0,
-//     duration: .5
-
-// })
-
-// gsap.to(".project_scrub" , {
-//     scrollTrigger:{
-//         trigger: ".project_scrub",
-//         start: "top 90%",
-//         end: "top 20%",
-//         scrub: 1,
-//         markers: true
-//     },
-//     x:50 ,
-//     ease: "none",
-//     duration: 3
-// });
