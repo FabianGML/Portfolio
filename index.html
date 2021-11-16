@@ -22,21 +22,32 @@
             <i class="ri-apps-2-line nav_toggle"></i>
  
         <div class="nav_cont">
-            <ul class="nav_list flex">
-                <li class="nav_item"><a href="#" class="nav_link"><i class="ri-home-2-line home_icon"></i>Home</a></li>
-                <li class="nav_item"><a href="#" class="nav_link"><i class="ri-code-box-line home_icon"></i>Projects</a></li>
-                <li class="nav_item"><a href="#" class="nav_link"><i class="ri-html5-line home_icon"></i> Tech</a></li>
-                <li class="nav_item"><a href="#" class="nav_link"><i class="ri-user-line home_icon"></i>About</a></li>
-                <li class="nav_item"><a href="#" class="nav_link"><i class="ri-contacts-book-line home_icon"></i>Contact</a></li>
+            <ul class="nav_list flex" id="nav-menu">
+                <li class="nav_item">
+                    <a href="#home" class="nav_link"><i class="ri-home-2-line home_icon"></i>Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#projects" class="nav_link"><i class="ri-code-box-line home_icon"></i>Projects</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#tech" class="nav_link"><i class="ri-html5-line home_icon"></i> Tech</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#about-me" class="nav_link"><i class="ri-user-line home_icon"></i>About</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#contact" class="nav_link"><i class="ri-contacts-book-line home_icon"></i>Contact</a>
+                </li>
             </ul>
-            <a href="#" class="menu_contact">
-                <span>Contact Me!</span>
-            </a>
+            <!-- <i class="ri-close-line nav_close" id="nav-close"></i> -->
         </div>
+        <a href="#contact" class="menu_contact">
+            <span>Contact Me!</span>
+        </a>
     </header>
 
-    <main class="main">
-        <section class="hero">
+    <main class="main" id="main">
+        <section class="hero" id="home">
             <div class="hero_cont flex">
                 <div class="hero_text">
                     <h1 class="name">Fabián Gutiérrez</h1>
@@ -71,12 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="section projects">
-            <!-- <div class="project_title"> -->
-                <!-- <span class="project_scrub">M</span> -->
-                <!-- <span class="project_scrub2">y</span> -->
-                <!-- <span class="project_scrub3">PROJECTS</span> -->
-            <!-- </div> -->
+        <section class="section projects" id="projects">
             <h2 class="title">My Projects!</h2>
             <div class="project_cont swiper">
                 <div class="swiper-wrapper">
@@ -116,7 +122,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="tech">
             <div class="tech_cont">
                 <img src="assets/imagenes/tech-comp.svg" alt="technology" class="tech_comp">
                 <div class="current_tech">
@@ -196,12 +202,7 @@
                         
                         <label for="message">Message:</label>
                         <textarea name="message" required cols="30" rows="5" placeholder="Leave a message"></textarea>
-                        <?php
-                        if(isset($_SESSION['email_send'])){
-                            echo $_SESSION['email_send'];
-                            unset($_SESSION['email_send']);
-                        }
-                         ?>
+                       
                         <button type="submit" name="submit"class="send_btn">Contact me!</button>
                     </form>
                     <div class="contact_link_cont">
