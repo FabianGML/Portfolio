@@ -294,3 +294,20 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+/*==================== CONTACT FORM ====================*/
+
+const $form = document.getElementById('form'),
+$buttonMailto = document.getElementById('mail')
+
+$form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    console.log(form.get('name'))
+    $buttonMailto.setAttribute('href', `mailto:fabiangtml@gmail.com?subject=${form.get('subject')}&body= Hi, my name is: ${form.get('name')} my email is: ${form.get('email')} and here is my message:${form.get('message')}`)
+    $buttonMailto.click()
+
+}
+

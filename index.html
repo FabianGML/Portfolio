@@ -189,7 +189,7 @@
             <div class="contact_container">
                 <h3 class="title">Contact Me!</h3>
                 <div class="form_cont">
-                    <form action="email.php" method="POST">
+                    <form  method="POST" id="form">
 
                         <label for="name">Full Name:</label>
                         <input type="text" name="name" required placeholder="Type your name...">
@@ -198,13 +198,14 @@
                         <input type="email" name="email" required placeholder="Type your email...">
 
                         <label for="email">Subject:</label>
-                        <input type="tex" name="subject" required placeholder="Type your subject...">
+                        <input type="text" name="subject" required placeholder="Type your subject...">
                         
                         <label for="message">Message:</label>
                         <textarea name="message" required cols="30" rows="5" placeholder="Leave a message"></textarea>
                        
-                        <button type="submit" name="submit"class="send_btn">Contact me!</button>
+                        <button type="submit" name="submit"class="send_btn">Send Message</button>
                     </form>
+                    <a href="mailto:fabiangtml@gmail.com" id="mail">Mail</a>
                     <div class="contact_link_cont">
                         <a href="" class="social_link">
                             <i class="ri-linkedin-box-fill"></i>

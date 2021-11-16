@@ -496,6 +496,10 @@ textarea {
   cursor: pointer;
 }
 
+#mail{
+  opacity: 0;
+}
+
 /*=============== Media Queries ===============*/
  /* For small devices  */
  @media screen and (max-height: 660px), screen and (max-width: 340px){
