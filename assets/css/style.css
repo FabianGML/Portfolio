@@ -78,8 +78,6 @@ img {
 /*=============== HEADER ===============*/
 /* NAV */
 @media screen and (max-width: 767px){
-
-
 .nav_toggle{
   position: fixed;
   font-size: 1.5rem;
@@ -88,14 +86,19 @@ img {
   bottom: 2.5%;
   z-index: 200;
 }
+
+.nav_toggle.show-menu {
+  display: none;
+}
+
 .nav_list{
   position:fixed;
-  height: 17vh;
+  height: 140px;
   column-gap: 4rem;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   background-color: #0e263b;
-  margin: 1rem;
+  margin: 1rem ;
   padding: 1rem;
   row-gap: 1.5rem;
   flex-wrap: wrap;
@@ -108,6 +111,7 @@ img {
   z-index: 1000;
   transition: .5s ease;
 }
+
 
 .nav_list.show-menu {
   bottom: -1rem;
@@ -128,6 +132,19 @@ img {
   bottom: 3%;
   left: 3%;
 }
+
+/* .nav_close{
+  position: fixed;
+  font-size: 1.5rem;
+  bottom: 9.5rem;
+  right: 3rem;
+  display: none;
+  transition: 1s ease;
+}
+.nav_close.show-menu{
+  display: initial;
+  transition: 1s ease;
+} */
 }
 .menu_contact span {
   border: 2px solid var(--second-color);
@@ -468,6 +485,7 @@ textarea {
   padding: 1rem;
   width: initial;
   margin: 0 auto;
+  margin-bottom: 2rem;
   text-align: center;
   color: #fff;
   font-size: 1rem;
@@ -586,11 +604,12 @@ textarea {
     align-items: center;
   }
   .nav_list{
-    position: sticky;
+    position: fixed;
     justify-content:flex-end;
     align-items: center;
     column-gap: 1rem;
     width: 80%;
+    z-index: 1000;
   }
 
   .menu_contact{
@@ -632,8 +651,7 @@ textarea {
   }
   
   .title_scrub{
-    transform: rotate(-90deg);
-
+    display: none;
   }
 
   .about_info{
@@ -781,7 +799,6 @@ textarea {
   .project_cont{
     width: 90%;
   }
-
 
   .project_card{
     height: 50rem;
