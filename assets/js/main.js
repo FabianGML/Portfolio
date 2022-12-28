@@ -46,7 +46,7 @@ tl.from(".name", {
 
 tl.to(".dev" , {
     duration: 1.3,
-    text: "FullStack Web Developer"
+    text: "Software Developer"
 })
 
 tl.from(".pc_hero", {
