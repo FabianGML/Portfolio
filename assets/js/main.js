@@ -1,5 +1,4 @@
 /*============SHOW MENU==================*/
-
 const navToggle = document.querySelector('.nav_toggle'),
 navMenu = document.querySelector('.nav_list'),
 navClose = document.querySelector('.show-menu'),
@@ -72,73 +71,73 @@ tl.from(".mysql_hero", {
 });
 
 gsap.from(".html_hero", {
-    duration: .2,
+    duration: .3,
     x : 100,
     scale: 0.2,
     opacity: 0,
-    delay: 1.4,
+    delay: .5,
     ease: "bounce"
 });
 
 gsap.from(".css_hero", {
-    duration: .2,
+    duration: .3,
     x : -100,
     scale: 0.2,
     opacity: 0,
-    delay: 1.4,
+    delay: .5,
     ease: "bounce"
 });
 
 gsap.from(".js_hero", {
-    duration: .5,
+    duration: 1,
     x : 100,
     y: 90,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 gsap.from(".laravel_hero", {
-    duration: .5,
+    duration: 1,
     x : 20,
     y: 100,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 gsap.from(".git_hero", {
-    duration: .5,
+    duration: 1,
     x : -100,
     y: 100,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 gsap.from(".react_hero", {
-    duration: .5,
+    duration: 1,
     x : 80,
     y: -20,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 gsap.from(".pyt_hero", {
-    duration: .5,
+    duration: 1,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 gsap.from(".ang_hero", {
-    duration: .5,
+    duration: 1,
     x : -100,
     y: -10,
     scale: 0.2,
     opacity: 0,
-    delay: 1.6,
+    delay: .8,
     ease: "expo"
 });
 
@@ -149,10 +148,10 @@ tl.from(".menu_contact" , {
 })
 
 gsap.from(".nav_toggle" , {
-    duration: .5,
-    x: 200,
+    duration: .79,
+    x: 100,
     opacity: 0,
-    delay: 1.2
+    delay: .8
 })
 
 gsap.from(".nav_list" , {
@@ -169,34 +168,19 @@ gsap.from(".home_social" , {
     delay: .8
 })
 
-
-
-
- /*==================== PROJECT SWIPER ====================*/
-         let swiper = new Swiper(".project_cont", {
-             effect: "coverflow",
-             grabCursor: true,
-             centeredSlides: true,
-             slidesPerView: "auto",
-             loop: true,
-             spaceBetween: 28,
-             coverflowEffect: {
-                 rotate: 0,
-                },
-            });
-
- gsap.from(".project_card" , {
+ /*==================== Projects Gsap ====================*/
+gsap.from(".item", {
     scrollTrigger: {
-        trigger: ".project_card",
-        start: "30% 90%",
-        toggleActions: "play none none none",
+        trigger: ".container",
+        start: "-15% 90%",
+        end: "130% top",
+        toggleActions: "play none none none"
     },
-    x:100,
-    ease: "none",
     opacity: 0,
-    duration: .5
+    duration: .5, // reduce the tween duration when more projects cards are added
+    stagger: .2,
+    y:-100
 })
-
  /*==================== Tech Gsap ====================*/
  gsap.from("#tech-title", {
      scrollTrigger: {
@@ -248,7 +232,7 @@ gsap.to(".title_scrub", {
 gsap.from(".img_cont", {
     scrollTrigger: {
         trigger: ".img_cont",
-        start: "top 90%",
+        start: "-450% 90%",
         end: "290px top",
         toggleActions: "play none none none"
     },
